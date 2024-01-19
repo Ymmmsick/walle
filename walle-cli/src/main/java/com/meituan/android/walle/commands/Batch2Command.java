@@ -82,7 +82,7 @@ public class Batch2Command implements IWalleCommand {
         final String channelName = alias == null ? channel : alias;
         final String name = FilenameUtils.getBaseName(inputFile.getName());
         final String extension = FilenameUtils.getExtension(inputFile.getName());
-        final String newName = name + "_" + channelName + "." + extension;
+        final String newName = name + "-" + channelName + "." + extension;
         final File channelApk = new File(outputDir, newName);
         try {
             FileUtils.copyFile(inputFile, channelApk);
